@@ -1,7 +1,7 @@
+# OUTPUT:
+
 ```
 
-
-# OUTPUT:
 
 $ go test -v
 === RUN   TestUpper
@@ -37,5 +37,17 @@ fuzz: elapsed: 0s, gathering baseline coverage: 2/4 completed
 FAIL
 exit status 1
 FAIL    demo    0.008s
+
+
+
+$ go test ./... -v -run Handler
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestHandler_server
+--- PASS: TestHandler_server (0.00s)
+PASS
+ok      webapp/user     0.006s
+
+
 
 ```
