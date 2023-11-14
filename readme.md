@@ -3,6 +3,14 @@
 ```
 
 
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing
+
+$ go test
+PASS
+ok      go-testing      0.003s
+
+
 $ go test -v
 === RUN   TestUpper
     main_test.go:29: HELLO HELLO
