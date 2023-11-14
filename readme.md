@@ -39,6 +39,8 @@ exit status 1
 FAIL    demo    0.008s
 
 
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/08/demos/02-test-servers/02-after/user
 
 $ go test ./... -v -run Handler
 === RUN   TestHandler
