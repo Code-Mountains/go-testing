@@ -1,29 +1,32 @@
 package main
 
 import (
-	"strconv"
 	"strings"
 	"testing"
 )
 
 func toUpper(s string) string {
-	var b strings.Builder
 
-	for i := range s {
-		if _, err := strconv.Atoi(string(s[i])); err == nil {
-			b.WriteByte(s[i])
-			continue
-		}
+	// var b strings.Builder
 
-		if s[i] >= 'A' && s[i] <= 'Z' {
-			b.WriteByte(s[i])
-			continue
-		}
+	// for i := range s {
+	// 	if _, err := strconv.Atoi(string(s[i])); err == nil {
+	// 		b.WriteByte(s[i])
+	// 		continue
+	// 	}
 
-		b.WriteByte(byte(s[i]) - 32)
-	}
+	// 	if s[i] >= 'A' && s[i] <= 'Z' {
+	// 		b.WriteByte(s[i])
+	// 		continue
+	// 	}
 
-	return b.String()
+	// 	b.WriteByte(byte(s[i]) - 32)
+	// }
+
+	// return b.String()
+
+	return strings.ToUpper(s)
+
 }
 
 func TestUpper(t *testing.T) {
