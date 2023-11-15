@@ -10,10 +10,13 @@ $ pwd
 /home/sysadmin/Documents/code/go/go-testing/black_box_test
 
 
-
 $ go test ./... -coverprofile cover.out -covermode count
 ?   	black_box_test	[no test files]
 ok  	black_box_test/user	1.006s	coverage: 20.2% of statements
+
+
+$ go tool cover -html cover.out
+# ./frequency-coverage.html
 
 $ head -n 10 frequency-coverage.html 
 
@@ -114,7 +117,7 @@ black_box_test/user/service.go:27:      handleUsers     31.2%
 black_box_test/user/service.go:53:      handleUser      0.0%
 total:                                  (statements)    20.2%
 
-go tool cover -html cover.out
+$ go tool cover -html cover.out
 # ./coverage.html
 
 $ head -20 coverage.html 
