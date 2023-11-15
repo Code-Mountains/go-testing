@@ -1,7 +1,6 @@
-# unit_test/ 
-## Testing Business Logic 
-## Demo: Writing a Unit Test
-## https://app.pluralsight.com/course-player?clipId=6269aebe-e2e2-47a9-a822-516a15dc86f7
+# Go Unit Testing / unit_test 
+## Testing Business Logic / Demo: Writing a Unit Test
+### https://app.pluralsight.com/course-player?clipId=6269aebe-e2e2-47a9-a822-516a15dc86f7
 ## 03 / demos / 01_simple_test 
 
 ```
