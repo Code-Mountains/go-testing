@@ -1,5 +1,5 @@
 # Running Tets in Parallel 
-## ./unit_test/user/component_test.go
+## ./parallel_test/user/logic_test.go
 ## Testing Business Logic | Demo: Running Tests in Parallel 
 ### https://app.pluralsight.com/course-player?clipId=dc51eb51-32c2-4162-948c-bc3aaddf3639
 ## 03 / demos / 03_parallel_test_runs 
@@ -7,12 +7,10 @@
 ```
 
 $ pwd
-/home/sysadmin/Documents/code/go/go-testing/unit_test
+/home/sysadmin/Documents/code/go/go-testing/parallel_test
 
 $ go test ./... -v
-?       unit_test       [no test files]
-=== RUN   TestHandler
---- PASS: TestHandler (0.00s)
+?       parallel_test   [no test files]
 === RUN   TestGetOne
 --- PASS: TestGetOne (0.00s)
 === RUN   TestSlowOne
@@ -21,10 +19,10 @@ $ go test ./... -v
 === PAUSE TestSlowTwo
 === CONT  TestSlowOne
 === CONT  TestSlowTwo
---- PASS: TestSlowTwo (1.00s)
 --- PASS: TestSlowOne (1.00s)
+--- PASS: TestSlowTwo (1.00s)
 PASS
-ok      unit_test/user  1.005s
+ok      parallel_test/user      1.005s
 
 
 ```
