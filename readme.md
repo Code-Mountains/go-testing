@@ -1,7 +1,32 @@
-# OUTPUT:
+# Testing Business Logic 
+## 03 / demos / 01_simple_test 
 
 ```
 
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/unit_test/user
+
+
+$ go test 
+PASS
+ok      unit_test/user  0.004s
+
+
+$ go test unit_test/user
+ok      unit_test/user  (cached)
+
+
+
+$ go test ./...
+gook    unit_test/user  0.005s
+sysadmin@vault:~/Documents/code/go/go-testing/unit_test/user (main)$ 
+
+```
+
+
+# OUTPUT:
+
+```
 
 $ pwd
 /home/sysadmin/Documents/code/go/go-testing
