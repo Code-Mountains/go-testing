@@ -28,25 +28,23 @@ ok      parallel_test/user      1.005s
 ```
 
 # Go Component | Integration Testing 
-## ./unit_test/user/component_test.go
+## ./component_test/user/component_test.go
 ## Testing Business Logic | Demo: Writing a Component Test
 ### https://app.pluralsight.com/course-player?clipId=e52c361f-4f15-4a94-be05-b05d02a7f129
 ## 03 / demos / 02_integration_test 
 
 ```
-
 $ pwd
-/home/sysadmin/Documents/code/go/go-testing/unit_test
-
+/home/sysadmin/Documents/code/go/go-testing/component_test
 
 $ go test ./... -v
-?       unit_test       [no test files]
+?       component_test  [no test files]
 === RUN   TestHandler
 --- PASS: TestHandler (0.00s)
 === RUN   TestGetOne
 --- PASS: TestGetOne (0.00s)
 PASS
-ok      unit_test/user  0.003s
+ok      component_test/user     (cached)
 
 
 ```
