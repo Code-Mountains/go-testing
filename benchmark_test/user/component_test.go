@@ -89,3 +89,39 @@ func BenchmarkHandler(b *testing.B) {
 		Handler(&rw, req)
 	}
 }
+
+func BenchmarkHandlerParallel(b *testing.B) {
+	users = []User{
+		User{
+			ID:       3,
+			Username: "codemountains",
+		},
+		User{
+			ID:       4,
+			Username: "kdangol",
+		},
+	}
+
+	req, err := http.NewRequest(http.MethodGet, "/users", nil)
+
+	if err != nil {
+		b.Fatal(err)
+	}
+
+	b.ResetTimer()
+
+	b.Log(b.N)
+
+	b.RunParallel(func(pb *testing.PB) {
+		for pb.Next() {
+			rw := mockResponseWriter{}
+
+			if err != nil {
+				b.Fatal(err)
+			}
+
+			Handler(&rw, req)
+		}
+	})
+
+}

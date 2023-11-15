@@ -2,6 +2,63 @@
 
 ## ./benchmark_test/user/
 
+## Benchmark Testing | Demo: Writing Parallel Benchmarks
+
+### https://app.pluralsight.com/course-player?clipId=7b524a07-1a51-46d9-821c-efe6597bdc2a
+
+## 05 / demos / 03-parallel-benchmarks
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/benchmark_test
+
+
+$ go test ./... -v -bench . -benchmem
+?   	benchmark_test	[no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== RUN   TestSlowOne
+=== PAUSE TestSlowOne
+=== RUN   TestSlowTwo
+=== PAUSE TestSlowTwo
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== CONT  TestSlowOne
+=== CONT  TestSlowTwo
+--- PASS: TestSlowTwo (1.00s)
+--- PASS: TestSlowOne (1.00s)
+goos: linux
+goarch: amd64
+pkg: benchmark_test/user
+cpu: Intel(R) Core(TM) i7-7820HK CPU @ 2.90GHz
+BenchmarkHandler
+    component_test.go:80: 1
+    component_test.go:80: 100
+    component_test.go:80: 10000
+    component_test.go:80: 165993
+BenchmarkHandler-3           	  165993	      6968 ns/op	    5128 B/op	      64 allocs/op
+BenchmarkHandlerParallel
+    component_test.go:113: 1
+    component_test.go:113: 100
+    component_test.go:113: 10000
+    component_test.go:113: 259677
+    component_test.go:113: 327817
+BenchmarkHandlerParallel-3   	  327817	      3359 ns/op	    5128 B/op	      64 allocs/op
+PASS
+ok  	benchmark_test/user	4.346s
+
+
+```
+
+
+
+# Writing a Benchmark Test
+
+## ./benchmark_test/user/
+
 ## Benchmark Testing | Demo: Writing a Benchmark Test
 
 ### https://app.pluralsight.com/course-player?clipId=a6b627e0-f764-4d7a-becf-26d347f06ecc
