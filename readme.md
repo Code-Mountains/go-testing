@@ -15,6 +15,29 @@ $ go test ./... -coverprofile cover.out -covermode count
 ?   	black_box_test	[no test files]
 ok  	black_box_test/user	1.006s	coverage: 20.2% of statements
 
+$ head -n 10 frequency-coverage.html 
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <title>user: Go Coverage Report</title>
+                <style>
+                        body {
+                                background: black;
+                                color: rgb(80, 80, 80);
+$ tail -n 10 frequency-coverage.html 
+                }
+                if (location.hash != "") {
+                        select(location.hash.substr(1));
+                }
+                if (!visible) {
+                        select("file0");
+                }
+        })();
+        </script>
+</html>
+
 
 ```
 
