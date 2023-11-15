@@ -1,10 +1,66 @@
+# Install Go Doc: 
+
+```
+
+go get golang.org/x/tools/cmd/godoc 
+
+$ go get golang.org/x/tools/cmd/godoc 
+go: downloading golang.org/x/tools v0.15.0
+go: downloading golang.org/x/sys v0.14.0
+go: downloading github.com/yuin/goldmark v1.4.13
+go: downloading golang.org/x/mod v0.14.0
+go: added github.com/yuin/goldmark v1.4.13
+go: added golang.org/x/mod v0.14.0
+go: added golang.org/x/sys v0.14.0
+go: added golang.org/x/tools v0.15.0
+
+
+$ go install golang.org/x/tools/cmd/godoc 
+
+$ godoc -help
+usage: godoc -http=localhost:6060
+  -goroot string
+    	Go root directory (default "/usr/lib/go-1.21")
+  -http string
+    	HTTP service address (default "localhost:6060")
+  -index
+    	enable search index
+  -index_files string
+    	glob pattern specifying index files; if not empty, the index is read from these files in sorted order
+  -index_interval duration
+    	interval of indexing; 0 for default (5m), negative to only index once at startup
+  -index_throttle float
+    	index throttle value; 0.0 = no time allocated, 1.0 = full throttle (default 0.75)
+  -links
+    	link identifiers to their declarations (default true)
+  -maxresults int
+    	maximum number of full text search results shown (default 10000)
+  -notes string
+    	regular expression matching note markers to show (default "BUG")
+  -play
+    	enable playground
+  -templates string
+    	load templates/JS/CSS from disk in this directory
+  -timestamps
+    	show timestamps with directory listings
+  -url string
+    	print HTML for named URL
+  -v	verbose mode
+  -write_index
+    	write index to a file; the file name must be specified with -index_files
+  -zip string
+    	zip file providing the file system to serve; disabled if empty
+
+
+```
+
 # Writing an Example Test
 
 ## ./sample_test/logic_test.go
 
 ## Testing Code Samples | Demo: Writing an Example Test
 
-### https://app.pluralsight.com/course-player?clipId=3854fc76-ada8-44ad-a491-f838dce105ca
+### https://app.pluralsight.com/course-player?clipId=5b0e3802-b09b-4f73-9453-0309b2f59dd1
 
 ## 07 / demos / 01-example-test
 
