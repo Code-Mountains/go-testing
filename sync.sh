@@ -1,3 +1,12 @@
+mkdir -p black_box_test/user
+
+cp unit_test/user/logic.go black_box_test/user/logic.go
+cp unit_test/user/logic_test.go black_box_test/user/logic_test.go
+cp unit_test/user/component_test.go black_box_test/user/component_test.go
+cp unit_test/user/service.go black_box_test/user/service.go
+cp unit_test/go.mod black_box_test/go.mod
+cp unit_test/main.go black_box_test/main.go
+
 mkdir -p component_test/user
 
 cp unit_test/user/logic.go component_test/user/logic.go

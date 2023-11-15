@@ -1,4 +1,38 @@
-# Running Tets in Parallel 
+# Writing a Black Box Test
+## ./black_box_test/user/logic_bb_test.go
+## Testing Business Logic | Demo: Writing a Black Box Test
+### https://app.pluralsight.com/course-player?clipId=b060c09a-3483-407f-abf8-ef73516de5e0
+## 03 / demos / 04_white_and_black_box_testing
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/black_box_test
+
+$ go test ./... -v
+?       black_box_test  [no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== RUN   TestSlowOne
+=== PAUSE TestSlowOne
+=== RUN   TestSlowTwo
+=== PAUSE TestSlowTwo
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== CONT  TestSlowOne
+=== CONT  TestSlowTwo
+--- PASS: TestSlowTwo (1.00s)
+--- PASS: TestSlowOne (1.00s)
+PASS
+ok      black_box_test/user     (cached)
+
+
+```
+
+
+# Running Tests in Parallel 
 ## ./parallel_test/user/logic_test.go
 ## Testing Business Logic | Demo: Running Tests in Parallel 
 ### https://app.pluralsight.com/course-player?clipId=dc51eb51-32c2-4162-948c-bc3aaddf3639
