@@ -71,6 +71,53 @@ black_box_test/user/service.go:27:      handleUsers     31.2%
 black_box_test/user/service.go:53:      handleUser      0.0%
 total:                                  (statements)    20.2%
 
+go tool cover -html cover.out
+# ./coverage.html
+
+$ head -20 coverage.html 
+
+<!DOCTYPE html>
+<html>
+        <head>
+                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                <title>user: Go Coverage Report</title>
+                <style>
+                        body {
+                                background: black;
+                                color: rgb(80, 80, 80);
+                        }
+                        body, pre, #legend span {
+                                font-family: Menlo, monospace;
+                                font-weight: bold;
+                        }
+                        #topbar {
+                                background: black;
+                                position: fixed;
+                                top: 0; left: 0; right: 0;
+                                height: 42px;
+
+$ tail -20 coverage.html 
+                        visible = document.getElementById(part);
+                        if (!visible)
+                                return;
+                        files.value = part;
+                        visible.style.display = 'block';
+                        location.hash = part;
+                }
+                function onChange() {
+                        select(files.value);
+                        window.scrollTo(0, 0);
+                }
+                if (location.hash != "") {
+                        select(location.hash.substr(1));
+                }
+                if (!visible) {
+                        select("file0");
+                }
+        })();
+        </script>
+</html>
+
 
 ```
 
