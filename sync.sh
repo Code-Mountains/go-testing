@@ -1,3 +1,17 @@
+# Benchmarking 
+
+mkdir -p benchmark_test/user
+
+cp black_box_test/user/component_test.go benchmark_test/user/component_test.go
+cp black_box_test/user/logic_bb_test.go benchmark_test/user/logic_bb_test.go
+cp black_box_test/user/logic_test.go benchmark_test/user/logic_test.go
+cp black_box_test/user/logic.go benchmark_test/user/logic.go
+cp black_box_test/user/service.go benchmark_test/user/service.go
+cp black_box_test/go.mod benchmark_test/go.mod
+cp black_box_test/main.go benchmark_test/main.go
+cp black_box_test/cover.out benchmark_test/cover.out
+
+
 # Folder re-org 
 
 mkdir -p user 

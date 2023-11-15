@@ -1,3 +1,21 @@
+# Writing a Benchmark Test
+## ./benchmark_test/user/
+## Benchmark Testing | Demo: Writing a Benchmark Test
+### https://app.pluralsight.com/course-player?clipId=a6b627e0-f764-4d7a-becf-26d347f06ecc
+## 05 / demos / 01-creating-benchmark-tests
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/benchmark_test
+
+
+
+
+
+```
+
+
 # Calculating Coverage Frequency Reports
 ## ./black_box_test/user/
 ## Generating Code Coverage Reports | Demo: Calculating Coverage Frequency Reports
