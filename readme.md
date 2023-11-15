@@ -1,3 +1,37 @@
+# Calculating Code Coverage
+## ./black_box_test/user/
+## Generating Code Coverage Reports | Demo: Calculating Coverage Percentages
+### https://app.pluralsight.com/course-player?clipId=8e3665bc-52c5-4167-b5d0-51bef1c85f4d
+
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/black_box_test
+
+$ go test ./... -v -cover
+?       black_box_test  [no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== RUN   TestSlowOne
+=== PAUSE TestSlowOne
+=== RUN   TestSlowTwo
+=== PAUSE TestSlowTwo
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== CONT  TestSlowOne
+=== CONT  TestSlowTwo
+--- PASS: TestSlowTwo (1.00s)
+--- PASS: TestSlowOne (1.00s)
+PASS
+coverage: 20.2% of statements
+ok      black_box_test/user     (cached)        coverage: 20.2% of statements
+
+
+```
+
 # Writing a Black Box Test
 ## ./black_box_test/user/logic_bb_test.go
 ## Testing Business Logic | Demo: Writing a Black Box Test
@@ -11,7 +45,7 @@ $ pwd
 
 $ go test ./... -v
 ?       black_box_test  [no test files]
-=== RUN   TestHandler
+=== RUN   TestHandler   
 --- PASS: TestHandler (0.00s)
 === RUN   TestGetOne
 --- PASS: TestGetOne (0.00s)

@@ -1,3 +1,24 @@
+# Folder re-org 
+
+mkdir -p user 
+mkdir -p tests 
+mkdir -p tests/black_box_tests 
+mkdir -p tests/component_tests
+mkdir -p tests/unit_tests
+mkdir -p tests/parallel_tests
+
+cp black_box_test/user/component_test.go tests/component_tests/
+cp black_box_test/user/logic_bb_test.go tests/black_box_tests/
+cp black_box_test/user/logic_test.go tests/unit_tests/
+
+cp black_box_test/user/logic.go user/logic.go
+cp black_box_test/user/service.go user/service.go
+
+cp black_box_test/main.go tests/main.go 
+cp black_box_test/go.mod tests/go.mod 
+
+
+
 mkdir -p black_box_test/user
 
 cp unit_test/user/logic.go black_box_test/user/logic.go
