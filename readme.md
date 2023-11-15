@@ -1,7 +1,11 @@
 # Writing a Benchmark Test
+
 ## ./benchmark_test/user/
+
 ## Benchmark Testing | Demo: Writing a Benchmark Test
+
 ### https://app.pluralsight.com/course-player?clipId=a6b627e0-f764-4d7a-becf-26d347f06ecc
+
 ## 05 / demos / 01-creating-benchmark-tests
 
 ```
@@ -36,15 +40,48 @@ PASS
 ok  	benchmark_test/user	2.182s
 
 
+$ pwd
+
+Path
+----
+D:\Documents\code\golang\go-testing\benchmark_test
+
+$ go test ./... -v -bench .
+?       benchmark_test  [no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== RUN   TestSlowOne
+=== PAUSE TestSlowOne
+=== RUN   TestSlowTwo
+=== PAUSE TestSlowTwo
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== CONT  TestSlowOne
+=== CONT  TestSlowTwo
+--- PASS: TestSlowTwo (1.02s)
+--- PASS: TestSlowOne (1.02s)
+goos: windows
+goarch: amd64
+pkg: benchmark_test/user
+cpu: Intel(R) Core(TM) i7-7820HK CPU @ 2.90GHz
+BenchmarkHandler
+BenchmarkHandler-8        166917              6355 ns/op
+PASS
+ok      benchmark_test/user     2.182s
+
+
 
 ```
 
-
 # Calculating Coverage Frequency Reports
-## ./black_box_test/user/
-## Generating Code Coverage Reports | Demo: Calculating Coverage Frequency Reports
-### https://app.pluralsight.com/course-player?clipId=f911201e-ff28-4cce-ae96-b7599e55cd6f
 
+## ./black_box_test/user/
+
+## Generating Code Coverage Reports | Demo: Calculating Coverage Frequency Reports
+
+### https://app.pluralsight.com/course-player?clipId=f911201e-ff28-4cce-ae96-b7599e55cd6f
 
 ```
 
@@ -60,7 +97,7 @@ ok  	black_box_test/user	1.006s	coverage: 20.2% of statements
 $ go tool cover -html cover.out
 # ./frequency-coverage.html
 
-$ head -n 10 frequency-coverage.html 
+$ head -n 10 frequency-coverage.html
 
 <!DOCTYPE html>
 <html>
@@ -71,7 +108,7 @@ $ head -n 10 frequency-coverage.html
                         body {
                                 background: black;
                                 color: rgb(80, 80, 80);
-$ tail -n 10 frequency-coverage.html 
+$ tail -n 10 frequency-coverage.html
                 }
                 if (location.hash != "") {
                         select(location.hash.substr(1));
@@ -87,10 +124,12 @@ $ tail -n 10 frequency-coverage.html
 ```
 
 # Calculating Coverage Reports
-## ./black_box_test/user/
-## Generating Code Coverage Reports | Demo: Calculating Coverage Reports
-### https://app.pluralsight.com/course-player?clipId=275885d5-caa4-46fa-b618-93701f2aabef
 
+## ./black_box_test/user/
+
+## Generating Code Coverage Reports | Demo: Calculating Coverage Reports
+
+### https://app.pluralsight.com/course-player?clipId=275885d5-caa4-46fa-b618-93701f2aabef
 
 ```
 
@@ -101,7 +140,7 @@ $ go test ./... -coverprofile cover.out
 ?       black_box_test  [no test files]
 ok      black_box_test/user     1.005s  coverage: 20.2% of statements
 
-$ cat cover.out 
+$ cat cover.out
 mode: set
 black_box_test/user/logic.go:36.22,40.2 3 1
 black_box_test/user/logic.go:42.23,49.2 6 0
@@ -147,7 +186,7 @@ black_box_test/user/service.go:96.18,99.4 2 0
 black_box_test/user/service.go:101.10,102.45 1 0
 
 
-$ go tool cover -func cover.out 
+$ go tool cover -func cover.out
 black_box_test/user/logic.go:36:        getAll          100.0%
 black_box_test/user/logic.go:42:        add             0.0%
 black_box_test/user/logic.go:51:        getOne          100.0%
@@ -162,7 +201,7 @@ total:                                  (statements)    20.2%
 $ go tool cover -html cover.out
 # ./coverage.html
 
-$ head -20 coverage.html 
+$ head -20 coverage.html
 
 <!DOCTYPE html>
 <html>
@@ -184,7 +223,7 @@ $ head -20 coverage.html
                                 top: 0; left: 0; right: 0;
                                 height: 42px;
 
-$ tail -20 coverage.html 
+$ tail -20 coverage.html
                         visible = document.getElementById(part);
                         if (!visible)
                                 return;
@@ -208,13 +247,13 @@ $ tail -20 coverage.html
 
 ```
 
-
-
 # Calculating Code Coverage
-## ./black_box_test/user/
-## Generating Code Coverage Reports | Demo: Calculating Coverage Percentages
-### https://app.pluralsight.com/course-player?clipId=8e3665bc-52c5-4167-b5d0-51bef1c85f4d
 
+## ./black_box_test/user/
+
+## Generating Code Coverage Reports | Demo: Calculating Coverage Percentages
+
+### https://app.pluralsight.com/course-player?clipId=8e3665bc-52c5-4167-b5d0-51bef1c85f4d
 
 ```
 
@@ -224,7 +263,7 @@ $ pwd
 $ go test ./... -v -cover
 ?       black_box_test  [no test files]
 === RUN   TestHandler
---- PASS: TestHandler (0.00s)   
+--- PASS: TestHandler (0.00s)
 === RUN   TestGetOne
 --- PASS: TestGetOne (0.00s)
 === RUN   TestSlowOne
@@ -245,9 +284,13 @@ ok      black_box_test/user     (cached)        coverage: 20.2% of statements
 ```
 
 # Writing a Black Box Test
+
 ## ./black_box_test/user/logic_bb_test.go
+
 ## Testing Business Logic | Demo: Writing a Black Box Test
+
 ### https://app.pluralsight.com/course-player?clipId=b060c09a-3483-407f-abf8-ef73516de5e0
+
 ## 03 / demos / 04_white_and_black_box_testing
 
 ```
@@ -257,7 +300,7 @@ $ pwd
 
 $ go test ./... -v
 ?       black_box_test  [no test files]
-=== RUN   TestHandler   
+=== RUN   TestHandler
 --- PASS: TestHandler (0.00s)
 === RUN   TestGetOne
 --- PASS: TestGetOne (0.00s)
@@ -277,12 +320,15 @@ ok      black_box_test/user     (cached)
 
 ```
 
+# Running Tests in Parallel
 
-# Running Tests in Parallel 
 ## ./parallel_test/user/logic_test.go
-## Testing Business Logic | Demo: Running Tests in Parallel 
+
+## Testing Business Logic | Demo: Running Tests in Parallel
+
 ### https://app.pluralsight.com/course-player?clipId=dc51eb51-32c2-4162-948c-bc3aaddf3639
-## 03 / demos / 03_parallel_test_runs 
+
+## 03 / demos / 03_parallel_test_runs
 
 ```
 
@@ -307,11 +353,15 @@ ok      parallel_test/user      1.005s
 
 ```
 
-# Go Component | Integration Testing 
+# Go Component | Integration Testing
+
 ## ./component_test/user/component_test.go
+
 ## Testing Business Logic | Demo: Writing a Component Test
+
 ### https://app.pluralsight.com/course-player?clipId=e52c361f-4f15-4a94-be05-b05d02a7f129
-## 03 / demos / 02_integration_test 
+
+## 03 / demos / 02_integration_test
 
 ```
 $ pwd
@@ -329,12 +379,15 @@ ok      component_test/user     (cached)
 
 ```
 
+# Go Unit Testing
 
-# Go Unit Testing 
 ## ./unit_test/user/logic_test.go
+
 ## Testing Business Logic | Demo: Writing a Unit Test
+
 ### https://app.pluralsight.com/course-player?clipId=6269aebe-e2e2-47a9-a822-516a15dc86f7
-## 03 / demos / 01_simple_test 
+
+## 03 / demos / 01_simple_test
 
 ```
 
@@ -342,7 +395,7 @@ $ pwd
 /home/sysadmin/Documents/code/go/go-testing/unit_test/user
 
 
-$ go test 
+$ go test
 PASS
 ok      unit_test/user  0.004s
 
@@ -364,7 +417,6 @@ ok      unit_test/user  (cached)
 
 
 ```
-
 
 # OUTPUT:
 
@@ -407,8 +459,8 @@ failure while testing seed corpus entry: FuzzFoo/8643a79bab153d1be09b197e5c55f60
 fuzz: elapsed: 0s, gathering baseline coverage: 2/4 completed
 --- FAIL: FuzzFoo (0.01s)
     --- FAIL: FuzzFoo (0.00s)
-    
-=== NAME  
+
+=== NAME
 FAIL
 exit status 1
 FAIL    demo    0.008s
@@ -429,9 +481,8 @@ ok      webapp/user     0.006s
 
 ```
 
+# Official Go Docs for go help testflag
 
-
-# Official Go Docs for go help testflag 
 ```
 $ go help testflag
 The 'go test' command takes both flags that apply to 'go test' itself
@@ -725,8 +776,7 @@ In the second example, the argument math is passed through to the test
 binary, instead of being interpreted as the package list.
 ```
 
-
-# Official Go Docs for go tool cover 
+# Official Go Docs for go tool cover
 
 ```
 
@@ -775,4 +825,4 @@ Flags:
 
   Only one of -html, -func, or -mode may be set.
 
-  ```
+```
