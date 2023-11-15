@@ -1,5 +1,36 @@
+# Running Tets in Parallel 
+## ./unit_test/user/component_test.go
+## Testing Business Logic | Demo: Running Tests in Parallel 
+### https://app.pluralsight.com/course-player?clipId=dc51eb51-32c2-4162-948c-bc3aaddf3639
+## 03 / demos / 03_parallel_test_runs 
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/unit_test
+
+$ go test ./... -v
+?       unit_test       [no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== RUN   TestSlowOne
+=== PAUSE TestSlowOne
+=== RUN   TestSlowTwo
+=== PAUSE TestSlowTwo
+=== CONT  TestSlowOne
+=== CONT  TestSlowTwo
+--- PASS: TestSlowTwo (1.00s)
+--- PASS: TestSlowOne (1.00s)
+PASS
+ok      unit_test/user  1.005s
+
+
+```
+
 # Go Component | Integration Testing 
-## ./unit_test/component_test.go
+## ./unit_test/user/component_test.go
 ## Testing Business Logic | Demo: Writing a Component Test
 ### https://app.pluralsight.com/course-player?clipId=e52c361f-4f15-4a94-be05-b05d02a7f129
 ## 03 / demos / 02_integration_test 
@@ -24,7 +55,7 @@ ok      unit_test/user  0.003s
 
 
 # Go Unit Testing 
-## ./unit_test/logic_test.go
+## ./unit_test/user/logic_test.go
 ## Testing Business Logic | Demo: Writing a Unit Test
 ### https://app.pluralsight.com/course-player?clipId=6269aebe-e2e2-47a9-a822-516a15dc86f7
 ## 03 / demos / 01_simple_test 
@@ -47,7 +78,6 @@ ok      unit_test/user  (cached)
 
 $ go test ./...
 gook    unit_test/user  0.005s
-sysadmin@vault:~/Documents/code/go/go-testing/unit_test/user (main)$ 
 
 
 $ pwd
