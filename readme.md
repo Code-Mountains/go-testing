@@ -1,3 +1,23 @@
+# Calculating Coverage Frequency Reports
+## ./black_box_test/user/
+## Generating Code Coverage Reports | Demo: Calculating Coverage Frequency Reports
+### https://app.pluralsight.com/course-player?clipId=f911201e-ff28-4cce-ae96-b7599e55cd6f
+
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/black_box_test
+
+
+
+$ go test ./... -coverprofile cover.out -covermode count
+?   	black_box_test	[no test files]
+ok  	black_box_test/user	1.006s	coverage: 20.2% of statements
+
+
+```
+
 # Calculating Coverage Reports
 ## ./black_box_test/user/
 ## Generating Code Coverage Reports | Demo: Calculating Coverage Reports

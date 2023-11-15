@@ -1,8 +1,8 @@
-mode: set
+mode: count
 black_box_test/user/logic.go:36.22,40.2 3 1
 black_box_test/user/logic.go:42.23,49.2 6 0
-black_box_test/user/logic.go:51.35,54.26 3 1
-black_box_test/user/logic.go:54.26,55.17 1 1
+black_box_test/user/logic.go:51.35,54.26 3 2
+black_box_test/user/logic.go:54.26,55.17 1 2
 black_box_test/user/logic.go:55.17,57.4 1 1
 black_box_test/user/logic.go:59.2,59.60 1 1
 black_box_test/user/logic.go:62.35,64.2 1 1
