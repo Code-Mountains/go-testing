@@ -1,8 +1,13 @@
+# Sample Code Testing 
+
 # Fuzz Testing 
 
-mkdir -p fuzz_test
+mkdir -p sample_test/user
 
-cp black_box_test/go.mod fuzz_test/go.mod
+cp benchmark_test/go.mod sample_test/go.mod
+cp benchmark_test/main.go sample_test/main.go
+cp benchmark_test/user/* sample_test/user/
+
 
 
 
