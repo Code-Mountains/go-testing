@@ -77,6 +77,8 @@ func BenchmarkHandler(b *testing.B) {
 
 	b.ResetTimer()
 
+	b.Log(b.N)
+
 	for i := 0; i < b.N; i++ {
 		rw := mockResponseWriter{}
 

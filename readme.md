@@ -72,6 +72,36 @@ PASS
 ok      benchmark_test/user     2.182s
 
 
+$ go test ./... -v -bench .
+?   	benchmark_test	[no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== RUN   TestSlowOne
+=== PAUSE TestSlowOne
+=== RUN   TestSlowTwo
+=== PAUSE TestSlowTwo
+=== RUN   TestGetOne
+--- PASS: TestGetOne (0.00s)
+=== CONT  TestSlowOne
+=== CONT  TestSlowTwo
+--- PASS: TestSlowTwo (1.00s)
+--- PASS: TestSlowOne (1.00s)
+goos: linux
+goarch: amd64
+pkg: benchmark_test/user
+cpu: Intel(R) Core(TM) i7-7820HK CPU @ 2.90GHz
+BenchmarkHandler
+    component_test.go:80: 1
+    component_test.go:80: 100
+    component_test.go:80: 10000
+    component_test.go:80: 174354
+BenchmarkHandler-3   	  174354	      6887 ns/op
+PASS
+ok  	benchmark_test/user	2.283s
+
+
 
 ```
 
