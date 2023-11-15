@@ -23,6 +23,14 @@ $ go test ./...
 gook    unit_test/user  0.005s
 sysadmin@vault:~/Documents/code/go/go-testing/unit_test/user (main)$ 
 
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/unit_test
+
+$ go test ./user/
+ok      unit_test/user  (cached)
+
+
 ```
 
 
