@@ -14,6 +14,18 @@ $ pwd
 /home/sysadmin/Documents/code/go/go-testing/fuzz_test
 
 
+$ go test ./... -v
+=== RUN   TestUpper
+    main_test.go:36: HELLO HELLO
+--- PASS: TestUpper (0.00s)
+=== RUN   FuzzFoo
+=== RUN   FuzzFoo/seed#0
+--- PASS: FuzzFoo (0.00s)
+    --- PASS: FuzzFoo/seed#0 (0.00s)
+PASS
+ok  	fuzz_test	0.003s
+
+
 
 ```
 

@@ -41,7 +41,7 @@ func TestUpper(t *testing.T) {
 }
 
 func FuzzFoo(f *testing.F) {
-	f.Add("hello ")
+	f.Add("hello")
 
 	f.Fuzz(func(t *testing.T, s string) {
 		out := toUpper(s)
