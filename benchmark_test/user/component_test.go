@@ -57,7 +57,7 @@ func TestHandler(t *testing.T) {
 
 }
 
-func Benchmarkhandler(b *testing.B) {
+func BenchmarkHandler(b *testing.B) {
 	users = []User{
 		User{
 			ID:       3,

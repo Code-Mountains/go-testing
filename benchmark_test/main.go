@@ -1,7 +1,7 @@
 package main
 
 import (
-	"black_box_test/user"
+	"benchmark_test/user"
 	"log"
 	"net/http"
 )

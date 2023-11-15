@@ -1,7 +1,7 @@
 package user_test
 
 import (
-	"black_box_test/user"
+	"benchmark_test/user"
 	"testing"
 )
 
