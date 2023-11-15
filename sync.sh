@@ -1,3 +1,11 @@
+# Fuzz Testing 
+
+mkdir -p fuzz_test
+
+cp black_box_test/go.mod fuzz_test/go.mod
+
+
+
 # Benchmarking 
 
 mkdir -p benchmark_test/user

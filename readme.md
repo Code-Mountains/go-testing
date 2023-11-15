@@ -1,3 +1,24 @@
+# Writing a Fuzz Test
+
+## ./fuzz_test/main_test.go
+
+## Fuzz Testing | Demo: Writing a Fuzz Test
+
+### https://app.pluralsight.com/course-player?clipId=3854fc76-ada8-44ad-a491-f838dce105ca
+
+## 06 / demos / 02-after
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/fuzz_test
+
+
+
+```
+
+
+
 # Writing a Benchmark Test
 
 ## ./benchmark_test/user/
