@@ -3,7 +3,9 @@ package user
 import (
 	"bytes"
 	"encoding/json"
+	"io"
 	"net/http"
+	"net/http/httptest"
 	"testing"
 )
 
@@ -123,5 +125,42 @@ func BenchmarkHandlerParallel(b *testing.B) {
 			Handler(&rw, req)
 		}
 	})
+
+}
+
+func TestHandler_httptest(t *testing.T) {
+	users = []User{
+		User{
+			ID:       3,
+			Username: "codemountains",
+		},
+		User{
+			ID:       4,
+			Username: "kdangol",
+		},
+	}
+
+	req := httptest.NewRequest(http.MethodGet, "/users", nil)
+	rec := httptest.NewRecorder()
+
+	expect, err := json.Marshal(users)
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	Handler(rec, req)
+
+	res := rec.Result()
+
+	got, err := io.ReadAll(res.Body)
+
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if !bytes.Equal(expect, got) {
+		t.Fail()
+	}
 
 }

@@ -1,3 +1,34 @@
+# Testing HTTP Handlers
+
+## ./sample_test/user/component_test.go
+
+## Testing HTTP Services | Demo: Testing HTTP Handlers
+
+### https://app.pluralsight.com/course-player?clipId=eeb13ad9-4618-4f8e-9c34-ce705e40feee
+
+## 08 / demos / 01-testing-handlers
+
+```
+
+$ pwd
+/home/sysadmin/Documents/code/go/go-testing/sample_test
+
+
+$ go test ./... -v -run Handler
+?   	sample_test	[no test files]
+=== RUN   TestHandler
+--- PASS: TestHandler (0.00s)
+=== RUN   TestHandler_httptest
+--- PASS: TestHandler_httptest (0.00s)
+PASS
+ok  	sample_test/user	0.004s
+
+
+
+```
+
+
+
 # Install Go Doc: 
 
 ```
@@ -53,6 +84,7 @@ usage: godoc -http=localhost:6060
 
 
 ```
+
 
 # Writing an Example Test
 
